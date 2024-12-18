@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lectura de Patentes</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
+    video, canvas {
+      width: 100%;
+      max-width: 480px;
+      height: auto;
+    }
+    #canvas {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    .overlay {
+      position: absolute;
+      pointer-events: none;
+    }
+    #manual-input {
+      margin-top: 20px;
+    }
+    #plateList {
+      margin-top: 10px;
+      list-style: none;
+      padding: 0;
+    }
+    #plateList li {
+      background: #f4f4f4;
+      margin: 5px 0;
+      padding: 10px;
+      border: 1px solid #ddd;
+    }
+    .error {
+      color: red;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Lectura de Patentes</h1>
+  <div style="position: relative; display: inline-block;">
+    <video id="video" autoplay playsinline></video>
+    <canvas id="canvas"></canvas>
+  </div>
+  <p id="errorMsg" class="error"></p>
+  <button id="captureButton">Capturar Patente</button>
+
+  <div id="manual-input">
+    <h3>Ingreso Manual</h3>
+    <input type="text" id="manualInput" placeholder="Ingrese patente manualmente">
+    <button id="manual-register-btn">Registrar Patente Manual</button>
+  </div>
+
+  <h3>Patentes Detectadas</h3>
+  <ul id="plateList"></ul>
+
+  <script src="https://cdn.jsdelivr.net/npm/tesseract.js@2.1.5/dist/tesseract.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

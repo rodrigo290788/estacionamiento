@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-color: #f4f4f9;
+  }
+  
+  #camera-container {
+    margin-top: 20px;
+  }
+  
+  video, canvas {
+    width: 80%;
+    max-width: 400px;
+    border: 2px solid #ddd;
+    margin: 10px auto;
+  }
+  
+  button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin-top: 10px;
+    border-radius: 5px;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  #result-container {
+    margin-top: 20px;
+  }
+  
